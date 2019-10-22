@@ -1,0 +1,31 @@
+spring:
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        provider:
+          test:
+            authorization-uri: https://dev-554627.okta.com/oauth2/v1/authorize
+            token-uri: https://dev-554627.okta.com/oauth2/v1/token
+            user-info-uri: https://dev-554627.okta.com/oauth2/v1/userinfo
+            user-name-attribute: sub
+            jwk-set-uri: https://dev-554627.okta.com/oauth2/v1/keys
+        registration:
+          google:
+            client-id: 265481691347-fee4fvmgsrb53u2g38v382vsquhooe39.apps.googleusercontent.com
+            client-secret: UDPdrRbNZu86g0iEYSGA-GRV
+          github:
+            client-id: 997f824309e3c49c0e6a
+            client-secret: d37c804f2d5b3b734fdd777c92d7faaa4c9ea071
+          facebook:
+            client-id: 732053193888596
+            client-secret: edb131d6765d6738f3a60c68d6ac0f52
+          test:
+            client-id: 0oa1ms14kjNGjHrZ8357
+            client-secret: hYBD5nJkNdK2HIGMJuX2pN4VE5MQ2OJANCYu3CpA
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: "openid, profile, email, address, phone, offline_access"
+            client-name: Okra SSO
+            client-alias: Okra SSO
