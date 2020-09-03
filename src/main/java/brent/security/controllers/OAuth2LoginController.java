@@ -1,4 +1,4 @@
-package shelter.b2b.controllers;
+package brent.security.controllers;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -23,6 +23,7 @@ public class OAuth2LoginController {
         model.addAttribute("userName", oauth2User.getName());
         model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
         model.addAttribute("userAttributes", oauth2User.getAttributes());
+        authentication.isAuthenticated();
         return "index";
     }
 }

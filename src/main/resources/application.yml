@@ -1,3 +1,10 @@
+okta:
+  urls:
+    base-url: https://dev-554627.okta.com
+  security:
+    oauth2:
+      apiKey: 009LO8vpzzZ2gVQPByMrWHDH1Maj_fErVQTUJ_ho4F
+
 spring:
   thymeleaf:
     cache: false
@@ -5,7 +12,7 @@ spring:
     oauth2:
       client:
         provider:
-          test:
+          okta:
             authorization-uri: https://dev-554627.okta.com/oauth2/v1/authorize
             token-uri: https://dev-554627.okta.com/oauth2/v1/token
             user-info-uri: https://dev-554627.okta.com/oauth2/v1/userinfo
@@ -27,7 +34,7 @@ spring:
           facebook:
             client-id: 732053193888596
             client-secret: edb131d6765d6738f3a60c68d6ac0f52
-          test:
+          okta:
             client-id: 0oa1ms14kjNGjHrZ8357
             client-secret: hYBD5nJkNdK2HIGMJuX2pN4VE5MQ2OJANCYu3CpA
             authorization-grant-type: authorization_code
